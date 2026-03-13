@@ -577,8 +577,8 @@ System Architecture
 <div class="reveal" data-purpose="visual-flow-diagram">
 <div class="rounded-2xl sm:rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-white/[0.01] backdrop-blur-sm p-5 sm:p-7 lg:p-8">
 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
-<h3 class="text-white font-bold text-lg sm:text-xl">Minimal Clinical Data Flow</h3>
-<span class="text-[11px] sm:text-xs font-mono text-gray-500 uppercase tracking-wider">01 ICU -> 02 Kafka -> 03 Pathway -> 04 PyTorch -> 05 LSTM -> 06 Dashboard</span>
+<h3 class="text-white font-bold text-lg sm:text-xl">VitalX End-to-End Topology</h3>
+<span class="text-[11px] sm:text-xs font-mono text-gray-500 uppercase tracking-wider">Vital Simulator -> Kafka -> Pathway Engine -> ML/API/Alerts -> Frontend</span>
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-6 gap-4">
@@ -589,8 +589,8 @@ System Architecture
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h4l2-4 3 8 2-4h7"/>
 </svg>
 </div>
-<h4 class="text-white font-semibold text-sm mb-1">ICU Vitals</h4>
-<p class="text-xs text-gray-500">Live bedside telemetry</p>
+<h4 class="text-white font-semibold text-sm mb-1">Vital Simulator</h4>
+<p class="text-xs text-gray-500">Physiological data generator (8 patients)</p>
 </div>
 
 <div class="p-4 rounded-xl border border-white/10 bg-black/40 hover:border-brand-blue/40 transition-all duration-300">
@@ -606,7 +606,7 @@ System Architecture
 </svg>
 </div>
 <h4 class="text-white font-semibold text-sm mb-1">Apache Kafka</h4>
-<p class="text-xs text-gray-500">Event stream backbone</p>
+<p class="text-xs text-gray-500">Topics: vitals_raw, vitals_enriched, vitals_predictions</p>
 </div>
 
 <div class="p-4 rounded-xl border border-white/10 bg-black/40 hover:border-brand-cyan/40 transition-all duration-300">
@@ -616,8 +616,8 @@ System Architecture
 <span class="text-[10px] font-mono font-bold text-brand-cyan">PW</span>
 </div>
 </div>
-<h4 class="text-white font-semibold text-sm mb-1">Pathway</h4>
-<p class="text-xs text-gray-500">Feature + streaming RAG</p>
+<h4 class="text-white font-semibold text-sm mb-1">Pathway Engine</h4>
+<p class="text-xs text-gray-500">Real-time feature engineering + stream processing</p>
 </div>
 
 <div class="p-4 rounded-xl border border-white/10 bg-black/40 hover:border-orange-400/40 transition-all duration-300">
@@ -629,8 +629,8 @@ System Architecture
 <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
 </svg>
 </div>
-<h4 class="text-white font-semibold text-sm mb-1">PyTorch</h4>
-<p class="text-xs text-gray-500">Inference runtime</p>
+<h4 class="text-white font-semibold text-sm mb-1">Pathway RAG System</h4>
+<p class="text-xs text-gray-500">Semantic embeddings, 3-hour window, query API :8080</p>
 </div>
 
 <div class="p-4 rounded-xl border border-white/10 bg-black/40 hover:border-brand-pink/40 transition-all duration-300">
@@ -645,8 +645,8 @@ System Architecture
 <path stroke-linecap="round" stroke-width="1.8" d="M7.5 7.5l3 3m6-3l-3 3m-6 6l3-3m6 3l-3-3"/>
 </svg>
 </div>
-<h4 class="text-white font-semibold text-sm mb-1">LSTM Model</h4>
-<p class="text-xs text-gray-500">Sepsis risk prediction</p>
+<h4 class="text-white font-semibold text-sm mb-1">ML Service</h4>
+<p class="text-xs text-gray-500">PyTorch LSTM sepsis risk prediction (:8001)</p>
 </div>
 
 <div class="p-4 rounded-xl border border-white/10 bg-black/40 hover:border-brand-cyan/40 transition-all duration-300">
@@ -656,8 +656,8 @@ System Architecture
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L15 12l-5.25-5M3 17h4l2-3 2 3h10"/>
 </svg>
 </div>
-<h4 class="text-white font-semibold text-sm mb-1">Dashboard</h4>
-<p class="text-xs text-gray-500">Alerts + clinical actions</p>
+<h4 class="text-white font-semibold text-sm mb-1">Backend API</h4>
+<p class="text-xs text-gray-500">FastAPI + WebSocket aggregation layer (:8000)</p>
 </div>
 </div>
 </div>
@@ -666,7 +666,7 @@ System Architecture
 <!-- Architecture Stack Logos -->
 <div class="mt-8 sm:mt-10 reveal">
 <div class="rounded-2xl border border-white/10 bg-black/30 p-4 sm:p-5">
-<p class="text-[11px] uppercase tracking-[0.18em] text-gray-500 mb-4">Core Stack</p>
+<p class="text-[11px] uppercase tracking-[0.18em] text-gray-500 mb-4">Downstream Services</p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-brand-blue/10 border border-brand-blue/30">
 <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -677,13 +677,13 @@ System Architecture
 <circle cx="18" cy="12" r="1.5" stroke-width="1.8"/>
 <path stroke-linecap="round" stroke-width="1.8" d="M12 6.5v4M12 13.5v4M7.5 12h3M13.5 12h3"/>
 </svg>
-<span class="text-xs font-semibold text-white">Kafka</span>
+<span class="text-xs font-semibold text-white">ML Service</span>
 </div>
 <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30">
 <div class="w-4 h-4 rounded border border-brand-cyan/50 bg-brand-cyan/10 flex items-center justify-center">
 <span class="text-[8px] font-mono font-bold text-brand-cyan">PW</span>
 </div>
-<span class="text-xs font-semibold text-white">Pathway</span>
+<span class="text-xs font-semibold text-white">Backend API</span>
 </div>
 <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-orange-500/10 border border-orange-400/30">
 <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -691,7 +691,7 @@ System Architecture
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4l3 3"/>
 <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
 </svg>
-<span class="text-xs font-semibold text-white">PyTorch</span>
+<span class="text-xs font-semibold text-white">Alert System</span>
 </div>
 <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-brand-pink/10 border border-brand-pink/30">
 <svg class="w-4 h-4 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -702,7 +702,7 @@ System Architecture
 <circle cx="12" cy="12" r="2" stroke-width="1.8"/>
 <path stroke-linecap="round" stroke-width="1.8" d="M7.5 7.5l3 3m6-3l-3 3m-6 6l3-3m6 3l-3-3"/>
 </svg>
-<span class="text-xs font-semibold text-white">LSTM</span>
+<span class="text-xs font-semibold text-white">Alert Engine</span>
 </div>
 </div>
 </div>
