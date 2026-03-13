@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
-<title>VitalX | AI-Powered ICU Digital Twin - Real-time Healthcare Intelligence</title>
+  <title>VitalX | AI-Powered ICU Digital Twin: Real-time Healthcare Intelligence</title>
 <meta content="Real-time ICU patient monitoring with predictive AI. Detect sepsis hours before clinical deterioration. Streaming RAG powered by Pathway." name="description"/>
 <!-- Tailwind CSS v3 CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -153,6 +153,47 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Projector-friendly readability tuning */
+    @media (min-width: 768px) {
+      body {
+        text-rendering: optimizeLegibility;
+      }
+
+      .text-gray-500 {
+        color: #a8b7c8 !important;
+      }
+
+      .text-gray-400 {
+        color: #d3deea !important;
+      }
+
+      .text-gray-300 {
+        color: #e7eef7 !important;
+      }
+
+      .text-xs,
+      [class*="text-[9px]"],
+      [class*="text-[10px]"],
+      [class*="text-[11px]"] {
+        font-size: 0.84rem !important;
+        line-height: 1.35rem !important;
+      }
+
+      .text-sm {
+        font-size: 0.98rem !important;
+        line-height: 1.5rem !important;
+      }
+
+      .text-base {
+        font-size: 1.08rem !important;
+        line-height: 1.75rem !important;
+      }
+
+      .font-mono {
+        letter-spacing: 0.02em;
+      }
+    }
   </style>
 </head>
 <body class="bg-brand-black text-gray-200 font-sans selection:bg-brand-cyan selection:text-brand-black antialiased overflow-x-hidden">
@@ -226,8 +267,10 @@ View Architecture
 </svg>
 NEXT-GEN ICU MONITORING SYSTEM
 </span>
-<h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight">
-VitalX — AI-Powered <span class="gradient-text block mt-2">ICU Digital Twin</span>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.98] tracking-tight">
+<span class="block">VitalX</span>
+<span class="block mt-1 sm:mt-2 whitespace-nowrap">AI-Powered</span>
+<span class="gradient-text block mt-2">ICU Digital Twin</span>
 </h1>
 <p class="text-lg sm:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-2xl">
 Real-time patient monitoring with predictive intelligence. Detect sepsis up to <span class="text-brand-cyan font-bold">4 hours before</span> clinical deterioration with streaming RAG and LSTM networks.
@@ -1298,7 +1341,7 @@ Send
 <section class="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-brand-black to-brand-slate px-4 relative overflow-hidden" data-purpose="impact-market" id="impact">
 <div class="blur-glow top-20 right-1/4"></div>
 <div class="max-w-7xl mx-auto">
-<div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+<div class="space-y-20 lg:space-y-24">
 <!-- SDG Impact -->
 <div class="reveal">
 <div class="mb-8 sm:mb-12">
@@ -1309,11 +1352,11 @@ Send
 </svg>
 UN Sustainable Development Goals
 </span>
-<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">Global Impact</h2>
-<p class="text-sm sm:text-base text-gray-400 leading-relaxed">VitalX supports key <span class="text-white font-bold">United Nations Sustainable Development Goals</span>, advancing global healthcare outcomes.</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">Clinical Impact That Saves Lives</h2>
+<p class="text-sm sm:text-base text-gray-400 leading-relaxed">VitalX aligns with key <span class="text-white font-bold">United Nations Sustainable Development Goals</span> while delivering measurable, life-saving outcomes in critical care.</p>
 </div>
 
-<div class="space-y-6">
+<div class="grid lg:grid-cols-2 gap-6">
 <div class="p-6 sm:p-8 bg-gradient-to-br from-green-500/10 via-black to-brand-black border-2 border-green-500/40 rounded-2xl hover:border-green-500 transition-all duration-300 shadow-xl">
 <div class="flex items-start gap-4 mb-4">
 <div class="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -1414,11 +1457,11 @@ UN Sustainable Development Goals
 </svg>
 Market Opportunity
 </span>
-<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">Scalable Platform</h2>
-<p class="text-sm sm:text-base text-gray-400 leading-relaxed">Massive global market for <span class="text-white font-bold">AI-powered ICU monitoring</span> with proven clinical impact.</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">Commercial Opportunity</h2>
+<p class="text-sm sm:text-base text-gray-400 leading-relaxed">Large global demand for <span class="text-white font-bold">AI-powered ICU monitoring</span> supported by a revenue model hospitals can adopt quickly.</p>
 </div>
 
-<div class="space-y-6 mb-8">
+<div class="grid lg:grid-cols-3 gap-6 mb-10">
 <div class="p-6 bg-gradient-to-r from-brand-cyan/10 to-brand-blue/10 border-2 border-brand-cyan/40 rounded-2xl hover:border-brand-cyan transition-all duration-300">
 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 pb-4 border-b border-white/10">
 <div>
@@ -1453,32 +1496,60 @@ Market Opportunity
 </div>
 </div>
 
-<div class="p-6 sm:p-8 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl">
-<h4 class="text-white font-bold mb-4 text-sm sm:text-base flex items-center gap-2">
-<svg class="w-5 h-5 text-brand-cyan flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+<div class="p-6 sm:p-10 lg:p-12 bg-gradient-to-br from-amber-400/12 via-black to-brand-black border-2 border-amber-300/35 rounded-3xl shadow-2xl relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-amber-200 via-amber-400 to-brand-cyan"></div>
+<div class="absolute top-0 right-0 w-56 h-56 bg-amber-300/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-1/3 w-56 h-56 bg-brand-cyan/8 rounded-full blur-3xl"></div>
+<div class="relative space-y-8 lg:space-y-10">
+<div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-8 lg:gap-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-300/30 bg-amber-300/10 text-amber-200 text-xs sm:text-sm font-bold uppercase tracking-[0.18em] mb-5">
+<svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
 <path d="M12 2L4 7v10c0 5.5 3.84 9 8 9s8-3.5 8-9V7l-8-5zm0 2.18L18 8v9c0 4.39-3.05 7-6 7s-6-2.61-6-7V8l6-3.82zM11 8v5l4 2.5"/>
 </svg>
-Business Model:
-</h4>
-<p class="text-xs sm:text-sm text-gray-400 mb-4 leading-relaxed">
-VitalX operates as a <strong class="text-white">cloud-based SaaS platform</strong> with <strong class="text-brand-cyan">pay-as-you-go</strong> pricing.
+Revenue Model
+</div>
+<h4 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight">Business Model Built for Fast Hospital Adoption</h4>
+<p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+VitalX operates as a <strong class="text-white">cloud-based SaaS platform</strong> with <strong class="text-amber-200">pay-as-you-go</strong> pricing, allowing hospitals to launch predictive ICU monitoring without a large upfront technology investment.
 </p>
-<div class="space-y-2 text-xs sm:text-sm text-gray-400">
-<div class="flex items-start gap-2">
-<span class="text-brand-cyan mt-0.5">•</span>
-<span>Per-bed monthly subscription model</span>
 </div>
-<div class="flex items-start gap-2">
-<span class="text-brand-cyan mt-0.5">•</span>
-<span>No large upfront infrastructure investment</span>
+<div class="grid sm:grid-cols-3 gap-3 lg:gap-4 xl:max-w-2xl w-full">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 min-h-[132px]">
+<span class="block text-[11px] uppercase tracking-[0.18em] text-amber-200 mb-2">Pricing</span>
+<span class="text-white font-bold text-lg sm:text-xl leading-snug">Per Bed / Month</span>
 </div>
-<div class="flex items-start gap-2">
-<span class="text-brand-cyan mt-0.5">•</span>
-<span>Scalable from single ICU to multi-hospital networks</span>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 min-h-[132px]">
+<span class="block text-[11px] uppercase tracking-[0.18em] text-amber-200 mb-2">Deployment</span>
+<span class="text-white font-bold text-lg sm:text-xl leading-snug">No Heavy CapEx</span>
 </div>
-<div class="flex items-start gap-2">
-<span class="text-brand-cyan mt-0.5">•</span>
-<span>Enterprise support & customization available</span>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 min-h-[132px]">
+<span class="block text-[11px] uppercase tracking-[0.18em] text-amber-200 mb-2">Expansion</span>
+<span class="text-white font-bold text-lg sm:text-xl leading-snug">Single ICU to Network</span>
+</div>
+</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-4 lg:gap-5">
+<div class="rounded-2xl border border-white/10 bg-black/30 p-5 sm:p-6 h-full">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-amber-300/15 text-amber-200 flex items-center justify-center font-black text-sm flex-shrink-0">1</div>
+<h5 class="text-white font-semibold text-lg leading-snug">Low-friction buying model</h5>
+</div>
+<p class="text-sm sm:text-base text-gray-300 leading-relaxed">Hospitals subscribe gradually by monitored bed instead of replacing their full stack on day one.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-black/30 p-5 sm:p-6 h-full">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-amber-300/15 text-amber-200 flex items-center justify-center font-black text-sm flex-shrink-0">2</div>
+<h5 class="text-white font-semibold text-lg leading-snug">No upfront infra burden</h5>
+</div>
+<p class="text-sm sm:text-base text-gray-300 leading-relaxed">Cloud delivery removes large installation, maintenance, and hardware procurement cost at launch.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-black/30 p-5 sm:p-6 h-full">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-amber-300/15 text-amber-200 flex items-center justify-center font-black text-sm flex-shrink-0">3</div>
+<h5 class="text-white font-semibold text-lg leading-snug">Enterprise-ready growth</h5>
+</div>
+<p class="text-sm sm:text-base text-gray-300 leading-relaxed">Customization, support, and multi-site rollout make the model fit both single ICUs and hospital groups.</p>
 </div>
 </div>
 </div>
